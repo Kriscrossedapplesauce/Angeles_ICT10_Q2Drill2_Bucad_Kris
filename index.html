@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill2</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js" type="py" src="./main.py"></script>
+    <script type="py" src="./main.py"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            text-align: center;
+            color: #222222;
+            margin-bottom: 6px;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #495057; 
+        }
+
+        input{
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        input{
+            outline: none;
+            border-color: #293ad3;
+            background-color: #ffffff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 24px;
+            background-color: #293ad3;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #202da5;
+        }
+
+        #output-box {
+            background-color: #293ad3;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            min-height: 140px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+
+<div>
+     <h2>Math Club Manager</h2>
+
+    <div class="mb-3">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" class="form-control" placeholder="Enter first name">
+    </div>
+                        
+    <div class="mb-3">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" class="form-control" placeholder="Enter last name">
+    </div>
+
+    <div class="d-grid mb-4">
+        <button py-click="add_member" class="btn btn-danger btn-lg shadow-sm">Submit</button>
+    </div>
+
+    <div id="output-box" class="p-4 rounded-3 text-white shadow-sm">
+        <p class="fw-bold mb-2">All members:</p>
+        <div id="member-list"></div>
+    </div>
+</div>
+
+</body>
+</html>
